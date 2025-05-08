@@ -48,6 +48,7 @@ export default {
         <pv-button  type="button" :label="getSubmitLabel()" class="p-button-text" icon="pi pi-check" @click="onSave" />
         <pv-button type="button" label="Cancel" severity="secondary" class="p-button-text" icon="pi pi-times" @click="onCancel" />
       </div>
+    </template>
   </pv-dialog>
 </template>
 
