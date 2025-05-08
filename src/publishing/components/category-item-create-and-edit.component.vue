@@ -1,9 +1,11 @@
 <script>
-import CreateAndEdit
+
+import CreateAndEdit from "../../shared/components/create-and-edit.component.vue";
 
 export default {
   name: "category-item-create-and-edit",
   components: {CreateAndEdit},
+
   props: {
     item: null,
     visible: false,
@@ -31,7 +33,14 @@ export default {
                  @cancel-action-requested="onCancelRequested"
                   @save-action-requested="onSaveRequested">
   <template #content>
-    
+    <div class="p-fluid">
+      <div class="field mt-5">
+        <pv-float-label>
+          <label for="name">Name</label>
+          <pv-input-text id="name" v-model="item.name" :class="{ 'p-invalid': submitted && !item.name }"/>
+        </pv-float-label>
+      </div>
+    </div>
   </template>
 </create-and-edit>
 </template>
